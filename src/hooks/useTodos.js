@@ -38,7 +38,9 @@ export const useTodos = () => {
         todos,
         returnNewTodo,
         removeTodoById,
-        completTodo
+        completTodo,
+        todosCount: todos.length,
+        todosPendingCount: todos.filter( todo => !todo.hecho).length,
     }
 }
 

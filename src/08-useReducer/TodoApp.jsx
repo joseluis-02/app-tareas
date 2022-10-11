@@ -4,11 +4,14 @@ import { TodoAdd, TodoList } from './';
 
 export const TodoApp = () => {
 
-    const {todos, returnNewTodo,removeTodoById,completTodo} = useTodos();
+    const {todos,todosCount,todosPendingCount, returnNewTodo,removeTodoById,completTodo} = useTodos();
 
   return (
     <>
-        <div className="shadow p-3 mt-2 bg-body rounded">Mis Tareas <span className="badge text-bg-light">{ todos.length }</span></div>
+        <div className="shadow p-3 mt-2 bg-body rounded">
+            Mis Tareas: <span className="badge text-bg-light">{ todosCount }</span> <br />
+            Pedientes: <span className="badge text-bg-light">{ todosPendingCount }</span> <br />
+        </div>
         <div className="row">
             <div className="col-sm-5 mt-3">
                 <TodoAdd
