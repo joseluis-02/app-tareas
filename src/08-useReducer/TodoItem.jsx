@@ -5,12 +5,14 @@ export const TodoItem = ({todo, returnIdTodo, onToggleTodo}) => {
         <span 
           className={`align-self-center ${ todo.hecho ? 'text-decoration-line-through' : ''}`}
           onClick={ () => onToggleTodo(todo.id) }
+          aria-label="spam"
         >
           { todo.descripcion }
         </span>
         <button 
           className="btn btn-sm btn-danger"
           onClick={ () => returnIdTodo( todo.id )}
+          aria-label="buttonDelete"
         >
             Borrar
         </button>

@@ -6,7 +6,7 @@ export const useForm = ( inicialForm = {} ) => {
         const { name, value } = target;
         setFormulario({
             ...Formulario,
-            [name ]: value
+            [ name ]: value
         })
     }
 
